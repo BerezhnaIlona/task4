@@ -1,18 +1,18 @@
 if (confirm('Почати тестування?')) {
-  const shopRow = Math.floor(Math.random() * 5 + 1);
-  const shopColumn = Math.floor(Math.random() * 5 + 1);
+  const shipRow = Math.floor(Math.random() * 5 + 1);
+  const shipColumn = Math.floor(Math.random() * 5 + 1);
 
   let hit = false;
 
   for (let i = 0; i < 5; i++) {
-    let shot1 = parseInt(prompt(`Введіть число від 1 до 10`, '1'));
-    let shot2 = parseInt(prompt(`Введіть число від 1 до 10`, '1'));
-    if (shot1 === shopRow && shot2 === shopColumn) {
+    let shot1 = parseInt(prompt(`Введіть число від 1 до 5`, '1'));
+    let shot2 = parseInt(prompt(`Введіть число від 1 до 5`, '1'));
+    if (shot1 === shipRow && shot2 === shipColumn) {
       document.write(`Ви потопили корабель!<br>`);
       hit = true;
       break;
     } else {
-      document.write(`Промах<br>`);
+      alert(`Промах`);
     }
   }
   if (!hit) {
